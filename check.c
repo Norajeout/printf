@@ -1,11 +1,13 @@
-#include"main.h"
+#include "main.h"
 /* BY CHARIFA MASBAHI & NORA JEOUT*/
+
 /**
- * check_format - check the format specifier
- * @list: parameters
- * @s: char
- * Return: the number of charavters printed
- */
+* check_format - check the format specifier
+* @list: parameters
+* @s: char
+* Return: the number of charavters printed
+*/
+
 int check_format(va_list list, char s)
 {
 	if (s == 'c')
