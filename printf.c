@@ -1,0 +1,34 @@
+#include "main.h"
+/* BY NORA JEOUT & CHARIFA MASBAHI*/
+/**
+ * _printf - function that produces output according to a format
+ * @format: format
+ * @...: parameters
+ * Return: the number of charavters printed
+ */
+int _printf(const char *format, ...)
+{
+	va_list ap;
+	unsigned int i = 0, c = 0;
+
+	va_start(ap, format);
+	while (format[i])
+	{
+		if (format[i] == '%')
+		{
+			i++;
+			if (format[i] == '%')
+				c += _putchar('%');
+			else if (format[i] == 'c')
+				c += _putchar(va_arg(ap, int));
+			else if (format[i] == 's')
+				c += _putstr(va_arg(ap, char *));
+		} else
+		{
+			c += _putchar(format[i]);
+		}
+		i++;
+	}
+	va_end(ap);
+	return (c);
+}
