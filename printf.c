@@ -9,7 +9,7 @@
 int _printf(const char *format, ...)
 {
 	va_list ap;
-	unsigned int i = 0, c = 0;
+	unsigned int i = 0, cha = 0;
 
 	va_start(ap, format);
 	while (format[i])
@@ -17,13 +17,14 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			c += check_format(ap, format[i]);
+			cha += check_format(ap, format[i]);
+			cha += _putchar('%');
 		} else
 		{
-			c += _putchar(format[i]);
+			cha += _putchar(format[i]);
 		}
 		i++;
 	}
 	va_end(ap);
-	return (c);
+	return (cha);
 }
