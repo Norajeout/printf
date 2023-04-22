@@ -6,6 +6,7 @@
  * @...: parameters
  * Return: the number of charavters printed
  */
+int check_format(va_list list, char s);
 int _printf(const char *format, ...)
 {
 	va_list ap;
@@ -17,12 +18,7 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			if (format[i] == '%')
-				c += _putchar('%');
-			else if (format[i] == 'c')
-				c += _putchar(va_arg(ap, int));
-			else if (format[i] == 's')
-				c += _putstr(va_arg(ap, char *));
+			c += check_format(ap, format[i]);
 		} else
 		{
 			c += _putchar(format[i]);
@@ -31,4 +27,22 @@ int _printf(const char *format, ...)
 	}
 	va_end(ap);
 	return (c);
+}
+/* BY CHARIFA MASBAHI & NORA JEOUT*/
+/**
+ * check_format - check the format specifier
+ * @list: parameters
+ * @s: char
+ * Return: the number of charavters printed
+ */
+int check_format(va_list list, char s)
+{
+	if (s == 'c')
+		return (_putchar(va_arg(list, int)));
+	else if (s == 's')
+		return (_putstr(va_arg(list, char *)));
+	else if (s == '%')
+		return (_putchar('%'));
+
+	return (0);
 }
