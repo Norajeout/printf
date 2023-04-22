@@ -2,10 +2,11 @@
 
 /* BY NORA JEOUT & CHARIFA MASBAHI*/
 /**
- * _printf - function that produces output according to a format
- * @format: format
- * Return: the number of characters printed
- */
+* _printf - function that produces output according to a format
+* @format: format
+* @... : parameters
+* Return: the number of characters printed
+*/
 int _printf(const char *format, ...)
 {
 	va_list ap;
