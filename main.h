@@ -5,11 +5,10 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <unistd.h>
-
-
 int _printf(const char *format, ...);
-int check(va_list list, char c);
 int _putchar(char c);
-int check(va_list list, char c);
+int _check(va_list list, char c);
+int _putstr(char *s);
+int check_format(va_list list, char s);
 
 #endif
