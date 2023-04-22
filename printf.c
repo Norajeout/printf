@@ -19,9 +19,7 @@ int _printf(const char *format, ...)
 			i++;
 			c += check_format(ap, format[i]);
 		} else
-		{
 			c += _putchar(format[i]);
-		}
 		i++;
 	}
 	va_end(ap);
