@@ -7,7 +7,6 @@
  */
 int _putchar(char c)
 {
-	if (!c)
-		return (-1);
-	return (write(1, &c, 1));
+	if (c)
+		return (write(1, &c, 1));
 }
