@@ -1,11 +1,19 @@
-#ifndef MAIN_H
+ifndef MAIN_H
 #define MAIN_H
-#include<stdarg.h>
-#include<unistd.h>
 
-int _putchar(char c);
-int _putstr(char *s);
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdarg.h>
+#include <string.h>
+#include <math.h>
+#include <stddef.h>
+#include <unistd.h>
+
+
 int _printf(const char *format, ...);
-int check_format(va_list list, char s);
+int check(va_list list, char c);
+int _putchar(char c);
+int check(va_list list, char c);
+int _print_string(char *s);
 
 #endif
