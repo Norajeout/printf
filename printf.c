@@ -11,7 +11,10 @@ int _printf(const char *format, ...)
 {
 	va_list ap;
 	unsigned int i = 0, c = 0;
-
+	if (!format)
+	{
+		return (-1);
+	}
 	va_start(ap, format);
 	while (format[i])
 	{
@@ -23,6 +26,7 @@ int _printf(const char *format, ...)
 			c += _putchar(format[i]);
 		i++;
 	}
+	
 	va_end(ap);
 	return (c);
 }
