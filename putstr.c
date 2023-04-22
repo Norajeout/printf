@@ -15,5 +15,5 @@ int _putstr(char *s)
 		write(1, &s[c], 1);
 		c++;
 	}
-	return (c);
+	return (0);
 }
