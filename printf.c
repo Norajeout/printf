@@ -18,7 +18,6 @@ int _printf(const char *format, ...)
 		{
 			i++;
 			c += check_format(ap, format[i]);
-			c += _putchar('%');
 		} else
 		{
 			c += _putchar(format[i]);
