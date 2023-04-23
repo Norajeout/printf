@@ -9,7 +9,7 @@
 */
 int _printf(const char *format, ...)
 {
-va_list ap;
+	va_list ap;
         int i = 0, c = 0;
 
         if (!format)
@@ -19,7 +19,7 @@ va_list ap;
         va_start(ap, format);
         while (format[i])
         {
-                if (format[i] == '%')
+                if (format[i] == ' ')
                 {
                         i++;
                         c += check_format(ap, format[i]);
