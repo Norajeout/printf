@@ -19,7 +19,7 @@ int _printf(const char *format, ...)
         va_start(ap, format);
         while (format[i])
         {
-                if (format[i] == ' ')
+                if (format[i] == '%')
                 {
                         i++;
                         c += check_format(ap, format[i]);
@@ -29,4 +29,5 @@ int _printf(const char *format, ...)
         }
         va_end(ap);
         return (c);
+
 }
