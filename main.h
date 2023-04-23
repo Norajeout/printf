@@ -7,7 +7,6 @@
 #include <unistd.h>
 int _printf(const char *format, ...);
 int _putchar(char c);
-int _check(va_list list, char c);
 int _putstr(char *s);
 int check_format(va_list list, char s);
 
