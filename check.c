@@ -16,13 +16,5 @@ int check_format(va_list list, char s)
 		return (_putstr(va_arg(list, char *)));
 	else if (s == '%')
 		return (_putchar('%'));
-	else if (s == 'd')
-		return (_putnbr(va_arg(list, int)));
-	else if (s == 'i')
-		return (_putnbr(va_arg(list, int)));
-	else if (s == 'u')
-		return (_putunbr(va_arg(list, unsigned int)));
-	else if (s == 'S')
-		return (_putS(va_arg(list, char *S)));
 	return (-1);
 }
