@@ -20,4 +20,7 @@ int check_format(va_list list, char s);
 int _strlen(const char *s);
 int _putnbr(int n);
 int _putint(int n);
+int _putunbr(unsigned int);
+int _hexa(unsigned int n, char *c);
+int _octal(unsigned int n);
 #endif

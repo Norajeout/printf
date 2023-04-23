@@ -18,5 +18,13 @@ int check_format(va_list list, char s)
 		return (_putchar('%'));
 	else if (s == 'i' || s == 'd')
 		return (_putint(va_arg(list, int)));
+	else if (s == 'u')
+		return (_putunbr(va_arg(list, unsigned int)));
+	else if (s == 'x')
+		return (_hexa(va_arg(list, unsigned int), "0123456789abcdef"));
+	else if (s == 'X')
+		return (_hexa(va_arg(list, unsigned int), "0123456789ABCDEF"));
+	else if (s == 'o')
+		return (_octal(va_arg(list, unsigned int)));
 	return (0);
 }
