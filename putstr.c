@@ -6,19 +6,32 @@
  * @s: string
  * Return: length of string
  */
+/*int _putstr(char *s)
+  {
+  int c = 0;
+
+  if (s == NULL)
+  {
+  printf("(NULL)");
+  return (-1);
+  }
+  while (s[c])
+  {
+  write(1, &s[c], 1);
+  c++;
+  }
+  return (c);
+  }*/
 int _putstr(char *s)
 {
-	int c = 0;
-
-	if (s == NULL)
+	int i = 0;
+	char *str;
+	str = (char *) malloc((strlen(s)) * sizeof(char));
+	while (s[i])
 	{
-		printf("(NULL)");
-		return (-1);
+		_putchar(s[i]);
+		i++;
 	}
-	while (s[c])
-	{
-		write(1, &s[c], 1);
-		c++;
-	}
-	return (c);
+	free(str);
+	return (i);
 }
