@@ -7,26 +7,46 @@
  * @... : parameters
  * Return: the number of characters printed
  */
-int _printf(const char *format, ...)
+int _printf(const char * const format, ...)
 {
-	va_list ap;
 	int i = 0, c = 0;
 
-	if (!format)
+	va_list list;
+
+	va_start(list, format);
+
+	if (format)
 	{
-		return (-1);
-	}
-	va_start(ap, format);
-	while (format[i])
-	{
-		if (format[i] == '%')
+		while (format[i])
 		{
+			if (format[i] == '%' && format[i - 1] != '%')
+			{
+				i++;
+				switch (format[i])
+				{
+					case 'c':
+						c += _putchar(va_arg(list, int));
+						break;
+					case 's':
+						c += _putstr(va_arg(list, char *));
+						break;
+					case '%':
+						c += _putchar('%');
+						break;
+					default:
+						continue;
+				}
+			}
+			else
+			{
+
+				c +=  _putchar(format[i]);
+			}
 			i++;
-			c += check_format(ap, format[i]);
-		} else
-			c += _putchar(format[i]);
-		i++;
+		}
+		return (c);
 	}
-	va_end(ap);
-	return (c);
+	return (-1);
+
+	va_end(list);
 }

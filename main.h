@@ -8,6 +8,5 @@
 int _printf(const char *format, ...);
 int _putchar(char c);
 int _putstr(char *s);
-int check_format(va_list list, char s);
 
 #endif
