@@ -1,8 +1,8 @@
 #include"main.h"
 /**
- * putunbr - print unsigned number
+ * _putunbr - print unsigned number
  * @n: unsigned int
- * Return : number of digit in number
+ * Return: number of digit in number
  */
 int _putunbr(unsigned int n)
 {
