@@ -24,10 +24,10 @@ int _putnbr(int n)
 	else if (n > 9)
 	{
 		c += _putnbr(n / 10);
-		c += _putnbr(n % 10);
+		c += _putchar(n % 10 + '0');
 	}
 	else
-		c += _putchar(n + '0');
+		c += _putchar(n + '0' + '0');
 	return (c);
 
 }
