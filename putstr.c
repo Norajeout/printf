@@ -12,11 +12,17 @@ int _putstr(char *s)
 	char *str;
 
 	str = (char *) malloc((_strlen(s)) * sizeof(char));
+	if (str == NULL)
+	{
+		return (-1);
+	}
 	while (s[i])
 	{
 		_putchar(s[i]);
+		str[i] = s[i];
 		i++;
 	}
+	str[i] = '\0';
 	free(str);
 	return (i);
 }
