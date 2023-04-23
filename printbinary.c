@@ -4,14 +4,9 @@
  * print_binary - Prints an unsigned number
  * @types: List of arguments
  * @buffer: Buffer to get print
- * @flags:  Calculates active flags
- * @width: get width.
- * @precision: Precision specification
- * @size: Size specifier
  * Return: Numbers characrets printed
  */
-int print_binary(va_list types, char buffer[],
-	int flags, int width, int precision, int size)
+int print_binary(va_list types, char buffer[])
 {
 	unsigned int d, o, i, result;
 	unsigned int a[32];
