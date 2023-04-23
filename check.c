@@ -26,5 +26,10 @@ int check_format(va_list list, char s)
 		return (_hexa(va_arg(list, unsigned int), "0123456789ABCDEF"));
 	else if (s == 'o')
 		return (_octal(va_arg(list, unsigned int)));
+	else
+	{
+		_putchar('%'), _putchar(s);
+		return (2);
+	}
 	return (0);
 }
