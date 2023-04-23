@@ -10,6 +10,10 @@ int _putstr(char *s)
 {
 	int c = 0;
 
+	if (*s == NULL)
+		printf("(NULL)");
+		return (-1);
+
 	while (s[c])
 	{
 		write(1, &s[c], 1);
