@@ -1,6 +1,13 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#undef INT_MAX
+#define INT_MAX 2147483647
+#undef INT_MIN
+#define INT_MIN (-INT_MAX - 1)
+#undef BUFFER_SIZE
+#define BUFFER_SIZE 1024
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
