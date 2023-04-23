@@ -29,7 +29,6 @@ int check_format(va_list list, char s)
 	else
 	{
 		_putchar('%'), _putchar(s);
-		return (2);
 	}
-	return (0);
+	return (2);
 }

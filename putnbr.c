@@ -33,7 +33,7 @@ int _putnbr(int n)
 }
 
 /**
- * putint - prints an integer
+ * _putint - prints an integer
  * @n: input integer
  * Return: number of digit in an integer
  */
