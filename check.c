@@ -17,6 +17,6 @@ int check_format(va_list list, char s)
 	else if (s == '%')
 		return (_putchar('%'));
 	else if (s == 'i' || s == 'd')
-		return (_putnbr('%'));
+		return (_putint(va_arg(list, int)));
 	return (0);
 }

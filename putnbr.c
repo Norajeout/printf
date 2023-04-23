@@ -27,7 +27,25 @@ int _putnbr(int n)
 		c += _putchar(n % 10 + '0');
 	}
 	else
-		c += _putchar(n + '0' + '0');
+		c += _putchar(n + '0');
 	return (c);
 
+}
+
+/**
+ * putint - prints an integer
+ * @n: input integer
+ * Return: number of digit in an integer
+ */
+int _putint(int n)
+{
+	int c = 0;
+	char *str;
+
+	str = (char *) malloc(BUFFER_SIZE * sizeof(char));
+	if (str == NULL)
+		return (-1);
+	c = _putnbr(n);
+	free(str);
+	return (c);
 }
