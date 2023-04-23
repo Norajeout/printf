@@ -9,12 +9,12 @@
 */
 int _printf(const char *format, ...)
 {
-	va_list ap;
+va_list ap;
         int i = 0, c = 0;
 
         if (!format)
         {
-                return (0);
+                return (-1);
         }
         va_start(ap, format);
         while (format[i])
@@ -29,5 +29,4 @@ int _printf(const char *format, ...)
         }
         va_end(ap);
         return (c);
-
 }
