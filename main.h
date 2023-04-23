@@ -18,9 +18,5 @@ int _putchar(char c);
 int _putstr(char *s);
 int check_format(va_list list, char s);
 int _strlen(char *s);
-int _putnbr(int n);
-int _putunbr(unsigned int n);
-int _putS(char *S);
-int _hexa(unsigned int n, char *c);
-int _octal(unsigned int n);
+
 #endif
