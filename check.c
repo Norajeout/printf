@@ -17,5 +17,5 @@ int check_format(va_list list, char s)
 	else if (s == '%')
 		return (_putchar('%'));
 
-	return (-1);
+	return (0);
 }
