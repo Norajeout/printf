@@ -1,35 +1,34 @@
 #include "main.h"
-/* BYYY NORAAAAAA JEOUT AND CHARIFA MASBAHI */
+/* by nora jeout and charifa masbahi*/
 /**
- * print_binary - Prints an unsigned number
- * @types: List of arguments
- * @buffer: Buffer to get print
- * Return: Numbers characrets printed
- */
-int print_binary(va_list types, char buffer[])
+* tobinary - print the binary of an unsigned int
+*@d: unsigned integer
+*Return: number of characters printed
+*/
+
+long tobinary(unsigned int d)
 {
-	unsigned int d, o, i, result;
-	unsigned int a[32];
-	int c;
+	long binary = 0;
+	int rem, i = 1;
+	long b = 0;
 
-	d = va_arg(types, unsigned int);
-	o = 2147483648; /* (2 ^ 31) */
-	a[0] = d / o;
-	for (i = 1; i < 32; i++)
+	while (d != 0)
 	{
-		o /= 2;
-		a[i] = (d / o) % 2;
+	rem = d % 2;
+	d /= 2;
+	binary += rem * i;
+	i = 10;
 	}
-	for (i = 0, result = 0, c = 0; i < 32; i++)
-	{
-		result += a[i];
-		if (result || i == 31)
-		{
-			char z = '0' + a[i];
 
-			write(1, &z, 1);
-			c++;
-		}
+	while (binary != 0)
+	{
+	b = b * 10 + (binary % 10);
+	binary /= 10;
 	}
-	return (c);
+	while (b != 0)
+	{
+	_putchar(b % 10 + '0');
+	b /= 10;
+	}
+	return (binary);
 }
