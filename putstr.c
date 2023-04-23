@@ -11,7 +11,7 @@ int _putstr(char *s)
 	int i = 0;
 	char *str;
 
-	str = (char *) malloc((strlen(s)) * sizeof(char));
+	str = (char *) malloc((_strlen(s)) * sizeof(char));
 	while (s[i])
 	{
 		_putchar(s[i]);
