@@ -11,10 +11,13 @@ int _printf(const char *format, ...)
 {
 	va_list ap;
 	int i = 0, c = 0;
+	int size = _strlen(format);
 
 	if (format == NULL)
 		return (-1);
 
+	if (size <= 0)
+		return(0);
 	va_start(ap, format);
 	while (format[i])
 	{

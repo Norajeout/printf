@@ -12,7 +12,8 @@ int _putstr(char *s)
 
 	if (s == NULL)
 	{
-		return (0);
+		_putstr("(null)");
+		return (6);
 	}
 	while (s[i])
 	{
