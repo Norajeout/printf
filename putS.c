@@ -7,6 +7,8 @@
 int _putS(char *S)
 {
 	int i = 0, j, x;
+	char hex[2];
+	char *c = "0123456789ABCDEF";
 
 	while (S[i])
 	{
@@ -14,8 +16,6 @@ int _putS(char *S)
 		{
 			i += write(1, "\\x", 2);
 			x = S[i];
-			char hex[2];
-			char *c = "0123456789ABCDEF";
 
 			for (j = 2 - 1; j >= 0; j--)
 			{
