@@ -7,22 +7,19 @@
 /*BY CHARIFA MASBAHI & NORA JEOUT*/
 int _octal(unsigned int n)
 {
-	int o, c = 0, i = 0;
-	char ochars[] = {'0', '1', '2', '3', '4', '5', '6', '7'};
-	int X[50];
+	const char *digits = "01234567";
+	char X[50];
+	char *p = X + sizeof(X) - 1;
+	int c = 0;
 
-	while (n > 0)
+	*p = '\0';
+	do
 	{
-		o = n % 8;
-		X[i] = ochars[o];
-		n = n / 8;
-		i++;
-	}
-	X[i] = '\0';
-	while (i > 0)
-	{
-		c += _putchar(X[i]);
-		i--;
-	}
+		*--p = digits[n % 8];
+		c++;
+		n /= 8;
+	} while (n != 0);
+	c += _putstr(p);
+
 	return (c);
 }
