@@ -19,4 +19,5 @@ int _putstr(char *s);
 int check_format(va_list list, char s);
 int _strlen(char *s);
 int _putnbr(int n);
+int _putunbr(unsigned int n);
 #endif
