@@ -5,6 +5,7 @@
  * @s: a parameter
  * Return: result
  */
+/* BY CHARIFA MASBAHI & NORA JEOUT*/
 int _strlen(char *s)
 {
 	int i = 0;
