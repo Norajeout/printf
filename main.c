@@ -16,7 +16,7 @@ int main(void)
 	_printf("Percent:[%%]\n");
 	printf("Percent:[%%]\n");
 	_printf("JUST A STRING\n");
-	printf("JUST A STRING\n")
+	printf("JUST A STRING\n");
 
 	return (0);
 }
