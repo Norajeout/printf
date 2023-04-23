@@ -9,6 +9,7 @@
 int _hexa(unsigned int n, char *c)
 {
 	int cp = 0;
+
 	if (n / 16)
 	{
 		cp += _hexa(n / 16, c);
