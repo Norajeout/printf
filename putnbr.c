@@ -15,7 +15,7 @@ int _putnbr(int n)
 	}
 	if (n > 9)
 	{
-		c +=_putnbr(n / 10);
+		c += _putnbr(n / 10);
 		c += _putnbr(n % 10);
 	}
 	else
