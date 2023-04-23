@@ -24,7 +24,7 @@ int _printf(const char *format, ...)
 			if (format[i] == '\0')
 				return (-1);
 			i++;
-			b = check_format(ap, format[i]);
+			c += check_format(ap, format[i]);
 
 		} else
 			c += _putchar(format[i]);
