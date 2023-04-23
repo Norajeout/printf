@@ -17,12 +17,6 @@ int print_binary(va_list types, char buffer[],
 	unsigned int a[32];
 	int c;
 
-	UNUSED(buffer);
-	UNUSED(flags);
-	UNUSED(width);
-	UNUSED(precision);
-	UNUSED(size);
-
 	d = va_arg(types, unsigned int);
 	o = 2147483648; /* (2 ^ 31) */
 	a[0] = d / o;
