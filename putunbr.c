@@ -8,6 +8,7 @@
 int _putunbr(unsigned int n)
 {
 	int i = 0;
+
 	if (n / 10)
 	{
 		_putunbr(n / 10);
