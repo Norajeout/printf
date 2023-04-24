@@ -24,9 +24,6 @@ int _printf(const char *format, ...)
 			last_index = i;
 			i++;
 			if (format[i] == '\0')
-			{
-				for (int j = 0; j < last_index; i++)
-					c += _putchar(format[j]);
 				return (-1);
 			c += check_format(ap, format[i]);
 
