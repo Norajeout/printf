@@ -1,6 +1,6 @@
 #include "main.h"
 
-/* BY NORA JEOUT & CHARIFA MASBAHI*/
+/* BY CHARIFA MASBAHI & NORA JEOUT*/
 /**
  * _printf - function that produces output according to a format
  * @format: format
@@ -12,9 +12,10 @@ int _printf(const char *format, ...)
 	va_list ap;
 	int i = 0, c = 0;
 
-	if (format == NULL)
+	if (!format || (format[0] == '%' && format[1] == '\0'))
+	{
 		return (-1);
-
+	}
 	va_start(ap, format);
 	while (format[i])
 	{
@@ -22,13 +23,9 @@ int _printf(const char *format, ...)
 		{
 			i++;
 			if (format[i] == '\0')
-			{
-				va_end(ap);
-				return (-1);
-			}
-			if (check_format(ap, format[i]) == -1)
 				return (-1);
 			c += check_format(ap, format[i]);
+
 		} else
 			c += _putchar(format[i]);
 		i++;

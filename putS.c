@@ -1,37 +1,28 @@
 #include "main.h"
+/* BY CHARIFA MASBAHI & NORA JEOUT*/
 /**
- * _putS - print non printable characters
- * @S: string
- * Return: number of char printed
+ * _putS - prints Ascii code of non printable characters
+ * @s: parameter
+ * Return: count of char printed
  */
-int _putS(char *S)
+int _putS(char *s)
 {
-	int i = 0, j, x;
+	int count = 0, j;
 
-	while (S[i])
+	if (!s)
+		return (_putstr(NULL));
+	for (j = 0; s[j]; j++)
 	{
-		if (*S < 32 || *S >= 127)
+		if (s[j] < 32 || s[j] >= 127)
 		{
-			i += write(1, "\\x", 2);
-			x = S[i];
-			char hex[2];
-			char *c = "0123456789ABCDEF";
-
-			for (j = 2 - 1; j >= 0; j--)
-			{
-				hex[j] = c[x % 16];
-				x /= 16;
-			}
-
-			for (j = 0; j < 2; j++)
-			{
-				j += write(1, &hex[j], 1);
-			}
-		} else if (*S == '\n')
-			write(1, "\\x0A", 4);
+			count += _putstr("\\x");
+			count += _putchar((s[j] / 16) + (s[j] / 16 > 9 ? 'A' - 10 : '0'));
+			count += _putchar((s[j] % 16) + (s[j] % 16 > 9 ? 'A' - 10 : '0'));
+		}
 		else
-			write(1, &S[i], 1);
-		i++;
+		{
+			count += _putchar(s[j]);
+		}
 	}
-	return (i);
+	return (count);
 }

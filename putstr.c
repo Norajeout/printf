@@ -9,20 +9,16 @@
 int _putstr(char *s)
 {
 	int i = 0;
-	char *str;
 
-	str = (char *) malloc((_strlen(s) + 1) * sizeof(char));
-	if (str == NULL)
+	if (s == NULL)
 	{
-		return (0);
+		write(1, "(null)", 6);
+		return (6);
 	}
 	while (s[i])
 	{
 		_putchar(s[i]);
-		str[i] = s[i];
 		i++;
 	}
-	str[i] = '\0';
-	free(str);
 	return (i);
 }

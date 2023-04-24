@@ -5,7 +5,6 @@
 #define INT_MAX 2147483647
 #undef INT_MIN
 #define INT_MIN (-INT_MAX - 1)
-#undef BUFFER_SIZE
 #define BUFFER_SIZE 1024
 
 #include <stdio.h>
@@ -17,10 +16,11 @@ int _printf(const char *format, ...);
 int _putchar(char c);
 int _putstr(char *s);
 int check_format(va_list list, char s);
-int _strlen(char *s);
+int _strlen(const char *s);
 int _putnbr(int n);
-int _putunbr(unsigned int n);
-int _putS(char *S);
+int _putint(int n);
+int _putunbr(unsigned int);
 int _hexa(unsigned int n, char *c);
 int _octal(unsigned int n);
+int _putS(char *s);
 #endif

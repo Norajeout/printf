@@ -1,19 +1,26 @@
 #include "main.h"
 /**
- * _octal - print the octal code of an integer
+ * _octal - convert decimal to octal
  * @n: parameter
- * Return: number of char printed
+ * Return: count printed digits
  */
-/** BY CHARIFA MASBAHI & NORA JEOUT*/
+/*BY CHARIFA MASBAHI & NORA JEOUT*/
 int _octal(unsigned int n)
 {
-	int o, c = 0;
-	char ochars[]={'0','1','2','3','4','5','6','7'};
-	while (n>0)
-	{
-		o = n%8;
-		c += _putchar(ochars[o]);
-		n = n/8;
-	}
+	const char *digits = "01234567";
+	char X[50];
+	char *p = X + sizeof(X) - 1;
+	int c = 0;
+
+	if (!p)
+		return (_putstr(NULL));
+	*p = '\0';
+	do {
+		*--p = digits[n % 8];
+		c++;
+		n /= 8;
+	} while (n != 0);
+	c += _putstr(p);
+
 	return (c);
 }
