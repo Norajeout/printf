@@ -13,8 +13,7 @@ int _octal(unsigned int n)
 	int c = 0;
 
 	*p = '\0';
-	do
-	{
+	do {
 		*--p = digits[n % 8];
 		c++;
 		n /= 8;
