@@ -41,5 +41,6 @@ int main(void)
 	_printf("Unknown%");
 	printf("\n");
 	_printf("%S\n", "Best\nSchool");
+	_printf("Binary:[%b]\n", 9);
 	return (0);
 }
