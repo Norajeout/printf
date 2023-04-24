@@ -16,14 +16,14 @@ int _printf(const char *format, ...)
 	{
 		return (-1);
 	}
+	if (format[0] == '%' && format[1] == ' ' && !format[2])
+		return (-1);
 	va_start(ap, format);
 	while (format[i])
 	{
 		if (format[i] == '%')
 		{
 			i++;
-			if (format[i] == '\0')
-				return (-1);
 			c += check_format(ap, format[i]);
 
 		} else
