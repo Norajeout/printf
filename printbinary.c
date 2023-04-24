@@ -6,29 +6,18 @@
 *Return: number of characters printed
 */
 
-long tobinary(unsigned int d)
+int tobinary(unsigned int d)
 {
-	long binary = 0;
-	int rem, i = 1;
-	long b = 0;
+	int i, c = 0, a[10];
 
-	while (d != 0)
+	for (i = 0; d > 0; i++)
 	{
-	rem = d % 2;
-	d /= 2;
-	binary += rem * i;
-	i = 10;
+		a[i] = d % 2;
+		d /= 2;
 	}
-
-	while (binary != 0)
+	for (i = i - 1; i >= 0; i--)
 	{
-	b = b * 10 + (binary % 10);
-	binary /= 10;
+		c += _putnbr(a[i]);
 	}
-	while (b != 0)
-	{
-	_putchar(b % 10 + '0');
-	b /= 10;
-	}
-	return (binary);
+	return (c);
 }
