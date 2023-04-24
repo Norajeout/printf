@@ -12,7 +12,7 @@ int _putstr(char *s)
 
 	if (s == NULL)
 	{
-		_putstr("(null)");
+		write(1, "(null)", 6);
 		return (6);
 	}
 	while (s[i])
