@@ -23,4 +23,5 @@ int _putint(int n);
 int _putunbr(unsigned int);
 int _hexa(unsigned int n, char *c);
 int _octal(unsigned int n);
+int _putS(char *s);
 #endif
