@@ -10,7 +10,7 @@
 int _printf(const char *format, ...)
 {
 	va_list ap;
-	int i = 0, c = 0;
+	int i = 0, c = 0, last_index;
 
 	if (!format || (format[0] == '%' && format[1] == '\0'))
 	{
@@ -21,8 +21,12 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
+			last_index = i;
 			i++;
 			if (format[i] == '\0')
+			{
+				for (int j = 0; j < last_index; i++)
+					c += _putchar(format[j]);
 				return (-1);
 			c += check_format(ap, format[i]);
 
