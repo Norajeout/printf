@@ -10,7 +10,7 @@
 int _printf(const char *format, ...)
 {
 	va_list ap;
-	int i = 0, c = 0, last_index;
+	int i = 0, c = 0;
 
 	if (!format || (format[0] == '%' && format[1] == '\0'))
 	{
@@ -21,7 +21,6 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			last_index = i;
 			i++;
 			if (format[i] == '\0')
 				return (-1);
