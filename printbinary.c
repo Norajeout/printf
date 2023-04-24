@@ -10,6 +10,8 @@ int tobinary(unsigned int d)
 {
 	int i, c = 0, a[10];
 
+	if (!d)
+		return (-1);
 	for (i = 0; d > 0; i++)
 	{
 		a[i] = d % 2;
