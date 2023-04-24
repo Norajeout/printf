@@ -12,6 +12,8 @@ int _octal(unsigned int n)
 	char *p = X + sizeof(X) - 1;
 	int c = 0;
 
+	if (!p)
+		return (_putstr(NULL));
 	*p = '\0';
 	do {
 		*--p = digits[n % 8];
