@@ -8,7 +8,7 @@
 int _putS(char *s)
 {
 	int count = 0, j;
-	
+
 	if (!s)
 		return (_putstr(NULL));
 	for (j = 0; s[j]; j++)
