@@ -10,6 +10,8 @@
 
 int check_format(va_list list, char s)
 {
+	if (s == NUll)
+		return (-1);
 	if (s == 'c')
 		return (_putchar(va_arg(list, int)));
 	else if (s == 's')
