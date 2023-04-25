@@ -35,10 +35,10 @@ int handle_unbr(unsigned int num, int flag)
 {
 	int count = 0;
 
-	if (flag && FLAG_PLUS)
+	if (flag & FLAG_PLUS)
 	{
 		count += _putchar('+');
-	} else if (flag && FLAG_SPACE)
+	} else if (flag & FLAG_SPACE)
 	{
 		count += _putchar(' ');
 	}
@@ -57,7 +57,7 @@ int handle_hexa(unsigned int num, int flag, char *hex_digits)
 {
 	int count = 0;
 
-	if (flag && FLAG_HASH)
+	if (flag & FLAG_HASH)
 	{
 		count += _putchar('0');
 		count += _putchar('x');
@@ -76,7 +76,7 @@ int handle_octal(unsigned int num, int flag)
 {
 	int count = 0;
 
-	if (flag && FLAG_HASH)
+	if (flag & FLAG_HASH)
 	{
 		count += _putchar('0');
 	}
