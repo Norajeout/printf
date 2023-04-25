@@ -7,27 +7,27 @@
  */
 int printrot13(va_list list)
 {
-	char *s;
-	int i = 0, j = 0;
-	char r[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char R[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	int i = 0;
+	char *s = va_arg(list, char *);
 
-	s = va_arg(list, char *);
-
-	while (s[j])
+	if (!s)
 	{
-		if (s[j] < 'A' || (s[j] > 'Z' && s[j] < 'a') || s[j] > 'z')
-			_putchar(s[j]);
+		return (_putstr(NULL));
+	}
+	while (*s)
+	{
+		if ((*s >= 65 && *s <= 90) || (*s >= 97 && *s <= 1223))
+		{
+			if (*s <= 77 || *s <= 109)
+				i += _putchar(*s + 13);
+			else
+				i += _putchar(*s - 13);
+		}
 		else
 		{
-			while (i <= 52)
-			{
-				if (s[j] == r[i])
-					_putchar(R[i]);
-				i++;
-			}
+			i += _putchar(*s);
 		}
-		j++;
+		s++;
 	}
-	return (j);
+	return (i);
 }
