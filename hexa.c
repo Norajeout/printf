@@ -15,7 +15,7 @@ int _hexa(unsigned int n, char *c)
 		cp += _hexa(n / 16, c);
 		cp += _hexa(n % 16, c);
 	} else
-		cp += _putchar(c[n]);
+		cp += _putint(c[n]);
 
 	return (cp);
 }
