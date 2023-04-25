@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#undef BUFFER_SIZE
 #undef INT_MAX
 #define INT_MAX 2147483647
 #undef INT_MIN
