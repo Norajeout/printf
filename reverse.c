@@ -7,19 +7,15 @@
  */
 int reverse(va_list list)
 {
-	int i = 0, c = 0;
-	char *s = va_arg(list, char *);
+	int i, c;
+	char *p;
 
-	if (!s)
-		return (_putstr(NULL));
-	while (s[i])
-	{
-		i++;
-	}
-	while (i >= 0)
-	{
-		c += _putchar(s[i]);
-		i--;
-	}
+
+	p = va_arg(list, char *);
+	c = _strlen(p);
+
+	for (i = c - 1; i >= 0; i--)
+		_putchar(p[i]);
+
 	return (c);
 }
