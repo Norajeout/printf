@@ -7,26 +7,42 @@
  */
 int _printpointer(va_list arm)
 {
-	void *p;
-	char *s = "(nil)";
-	long int n;
-	int c;
+	void *ptr = va_arg(arm, void *);
+	uintptr_t p = (uintptr_t)ptr;
+	int c = 0;
+	char hex_buffer[16];
+	int x = 0;
 	int i;
+	char *s;
 
-	p = va_arg(arm, void*);
-	if (!p)
+	if (!ptr)
 	{
+		s = "(nil)";
 		for (i = 0; s[i] != '\0'; i++)
 		{
-			_putchar(s[i]);
+			c += _putchar(s[i]);
 		}
-		return (i);
+		return (c);
 	}
 
-	n = (long int)p;
-	n = (unsigned long int)p;
-	_putchar('0');
-	_putchar('x');
-	c = printf_hex_aux(n);
-	return (c + 2);
+	c += _putchar('0');
+	c += _putchar('x');
+
+	while (p > 0)
+	{
+		int rem = p % 16;
+
+		if (rem < 10)
+			hex_buffer[x++] = '0' + rem;
+		else
+			hex_buffer[x++] = 'a' + (rem - 10);
+
+		p /= 16;
+	}
+	for (i = x - 1; i >= 0; i--)
+	{
+		c += _putchar(hex_buffer[i]);
+	}
+
+	return (c);
 }
