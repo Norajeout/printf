@@ -8,7 +8,7 @@
 int _printpointer(va_list arm)
 {
 	void *p;
-	char *s = "(nil)";
+	char *s = "(null)";
 	long int n;
 	int c;
 	int i;
