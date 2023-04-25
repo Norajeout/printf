@@ -27,8 +27,7 @@ int _printf(const char *format, ...)
 			b = check_format(ap, format[i]);
 			if (b == -1)
 				return (-1);
-			else 
-				c += b;
+			c += b;
 
 		} else
 			c += _putchar(format[i]);
