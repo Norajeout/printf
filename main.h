@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#undef BUFFER_SIZE
 #undef INT_MAX
 #define INT_MAX 2147483647
 #undef INT_MIN
@@ -30,4 +31,5 @@ int _putS(char *s);
 int tobinary(unsigned int d);
 int _printpointer(va_list arm);
 int printf_hex_aux(long int num);
+int printf_HEX_aux(unsigned int num);
 #endif
