@@ -1,10 +1,7 @@
 #include "main.h"
-
-/* BY CHARIFA MASBAHI & NORA JEOUT*/
 /**
  * _printf - function that produces output according to a format
- * @format: format
- * @... : parameters
+ * @format: format BY CHARIFA MASBAHI & NORA JEOUT
  * Return: the number of characters printed
  */
 int _printf(const char *format, ...)
@@ -26,7 +23,8 @@ int _printf(const char *format, ...)
 			{
 				c += _putchar('%');
 				break;
-			} if (format[i] == '+')
+			}
+			if (format[i] == '+')
 			{
 				flag = 1;
 				i++;

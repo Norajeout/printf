@@ -46,7 +46,6 @@ int check_format(va_list list, char s, int flag)
 		return (tobinary(va_arg(list, unsigned int)));
 	else if (s == 'p')
 		return (_printpointer(list));
-	_putchar('%'), _putchar(s);
-	return (2);
+	return(check_format2(list, s, flag));
 
 }
