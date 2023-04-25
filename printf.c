@@ -22,7 +22,7 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			if (format[i] == '\0' || (format[i] == ' ')
+			if (format[i] == '\0' || format[i] == ' ')
 				return (-1);
 			c += check_format(ap, format[i]);
 
