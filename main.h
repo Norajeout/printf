@@ -5,6 +5,7 @@
 #define INT_MAX 2147483647
 #undef INT_MIN
 #define INT_MIN (-INT_MAX - 1)
+
 #define BUFFER_SIZE 1024
 
 #include <limits.h>
