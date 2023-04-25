@@ -11,9 +11,8 @@ int _putunbr(unsigned int n)
 
 	if (n / 10)
 	{
-		_putunbr(n / 10);
-		i++;
+		i += _putunbr(n / 10);
 	}
-	i += _putchar((n % 10) + '0');
+	i += _putint((n % 10));
 	return (i);
 }
