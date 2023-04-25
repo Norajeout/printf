@@ -26,18 +26,36 @@ Printf is a group project assignment of two, this project is aimed towards cloni
 ### Supported Format Specifiers
 The printf function supports a wide range of format specifiers that allow for the formatting of output in a variety of ways. Here are the format specifiers that are supported in this implementation of printf:
 
-`%d: for integers`<br>
-`%s: for strings`<br>
-`%f: for floats/doubles`<br>
-`%b: for binary`<br>
-`%u: for unsigned integers`<br>
-`%o: for octal numbers`<br>
-`%x: for hexadecimal numbers (lowercase)`<br>
-`%X: for hexadecimal numbers (uppercase)`<br>
-`%S: for non-printable characters`<br>
-`%p: for pointer addresses`<br>
-`%r: for reversed strings`<br>
-`%R: for rot13'ed strings`<br>
+If the program runs successfully, the **return value** is the amount of chars printed.
+
+| Specifier | Output |
+| ------------- | ------------- |
+| c  | Character  |
+| d or i | Signed decimal integer |
+| s  | String of characters  |
+| b  | Signed binary  |
+| o  | Signed octal  |
+| u  | Unsigned integer  |
+| x  | Unsigned hexadecimal  |
+| X  | Unsigned hexadecimal (uppercase)  |
+| p  | Pointer address  |
+| r  | Reverse string of characters |
+| R  | ROT13 translation of string |
+| S  | String with special chars replaced by their ASCII value  |
+| %  | Character  |
+
+| Flags | Description | Specifiers |
+| ------------- | ------------- | ------------- | 
+| +  | Prints a plus sign (+) when the argument is a positive number. In other case, prints a minus sign (-). | i, d |
+| (space) | Prints a blank space if the argument is a positive number | i, d |
+| #  | Prints 0, 0x and 0X for o, x and X specifiers, respectively. It doesn't print anything if the argument is zero | o, x, X |
+
+| Length | Description | Specifiers |
+| ------------- | ------------- | ------------- | 
+| l | Prints a long int or unsigned long int | i, d, o, u, x and X |
+| h | Prints a short int or unsigned short int | i, d, o, u, x and X |
+
+------------
 
 
 ### To create our custom printf function, We need to plan out how it will work. We can create a flowchart to help us visualize the logic of the function. Here is an example of a simple flowchart for printf:
