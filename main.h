@@ -7,6 +7,7 @@
 #define INT_MIN (-INT_MAX - 1)
 #define BUFFER_SIZE 1024
 
+#include <limits.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
@@ -24,4 +25,5 @@ int _hexa(unsigned int n, char *c);
 int _octal(unsigned int n);
 int _putS(char *s);
 int tobinary(unsigned int d);
+int _printpointer(va_list arm);
 #endif
