@@ -9,6 +9,10 @@
 #undef BUFFER_SIZE
 #define BUFFER_SIZE 1024
 
+#define FLAG_PLUS 1
+#define FLAG_SPACE 2
+#define FLAG_HASH 4
+
 #include <limits.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -22,7 +26,7 @@
 int _printf(const char *format, ...);
 int _putchar(char c);
 int _putstr(char *s);
-int check_format(va_list list, char s);
+int check_format(va_list list, char s, int flag);
 int _strlen(const char *s);
 int _putnbr(int n);
 int _putint(int n);
@@ -32,4 +36,8 @@ int _octal(unsigned int n);
 int _putS(char *s);
 int tobinary(unsigned int d);
 int _printpointer(va_list arm);
+int handle_nbr(int num, int flag);
+int handle_unbr(unsigned int num, int flag);
+int handle_hexa(unsigned int num, int flag, char *hex_digits);
+int handle_octal(unsigned int num, int flag);
 #endif

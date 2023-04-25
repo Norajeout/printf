@@ -5,10 +5,11 @@
  * check_format - check the format specifier
  * @list: parameters
  * @s: char
+ * @flag: flag
  * Return: the number of charavters printed
  */
 
-int check_format(va_list list, char s)
+int check_format(va_list list, char s, int flag)
 {
 	if (s == 'c')
 		return (_putchar(va_arg(list, int)));
@@ -17,23 +18,37 @@ int check_format(va_list list, char s)
 	else if (s == '%')
 		return (_putchar('%'));
 	else if (s == 'i' || s == 'd')
+	{
+		if (flag != 0)
+			return (handle_nbr(va_arg(list, int), flag));
 		return (_putint(va_arg(list, int)));
-	else if (s == 'u')
+	} else if (s == 'u')
+	{
+		if (flag != 0)
+			return (handle_unbr(va_arg(list, unsigned int), flag));
 		return (_putunbr(va_arg(list, unsigned int)));
-	else if (s == 'x')
+	} else if (s == 'x')
+	{
+		if (flag != 0)
+			return (handle_hexa(va_arg(list, unsigned int), flag, "0123456789abcdef"));
 		return (_hexa(va_arg(list, unsigned int), "0123456789abcdef"));
-	else if (s == 'X')
+	} else if (s == 'X')
+	{
+		if (flag != 0)
+			return (handle_hexa(va_arg(list, unsigned int), flag, "0123456789ABCDEF"));
 		return (_hexa(va_arg(list, unsigned int), "0123456789ABCDEF"));
-	else if (s == 'o')
+	} else if (s == 'o')
+	{
+		if (flag)
+			return (handle_octal(va_arg(list, unsigned int), flag));
 		return (_octal(va_arg(list, unsigned int)));
-	else if (s == 'S')
+	} else if (s == 'S')
 		return (_putS(va_arg(list, char *)));
 	else if (s == 'b')
 		return (tobinary(va_arg(list, unsigned int)));
 	else if (s == 'p')
 		return (_printpointer(list));
-	_putchar('%');
-	_putchar(s);
+	_putchar('%'), _putchar(s);
 	return (2);
 
 }
