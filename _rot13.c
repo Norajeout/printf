@@ -8,7 +8,7 @@
 int printrot13(va_list list)
 {
 	char *s;
-	int i, j;
+	int i = 0, j = 0;
 	char r[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char R[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
