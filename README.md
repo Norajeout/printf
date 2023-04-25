@@ -80,6 +80,7 @@ If the program runs successfully, the **return value** is the amount of chars pr
 <p align="center">  
 <img src ="https://miro.medium.com/v2/resize:fit:720/format:webp/1*lX5wiJfKf1_1l8QqyGuaPQ.png">
 </p>
-### Authors
+AUTHORS
+
 > 1. [Norajeout](https://github.com/Norajeout)
 > 2. [CANDELY001](https://github.com/CANDELY001)
