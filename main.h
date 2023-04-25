@@ -19,12 +19,6 @@
 #include <stddef.h>
 #include <stdint.h>
 
-#define F_MINUS 1
-#define F_PLUS 2
-#define F_ZERO 4
-#define F_HASH 8
-#define F_SPACE 16
-
 
 int _printf(const char *format, ...);
 int _putchar(char c);
@@ -39,5 +33,4 @@ int _octal(unsigned int n);
 int _putS(char *s);
 int tobinary(unsigned int d);
 int _printpointer(va_list arm);
-int _getflags(const char *f, int *u);
 #endif
