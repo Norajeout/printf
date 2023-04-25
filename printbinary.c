@@ -8,18 +8,11 @@
 
 int tobinary(unsigned int d)
 {
-	int i, c = 0, a[10];
+	int cmp = 0;
 
-	if (!d)
-		return (-1);
-	for (i = 0; d > 0; i++)
-	{
-		a[i] = d % 2;
-		d /= 2;
-	}
-	for (i = i - 1; i >= 0; i--)
-	{
-		c += _putnbr(a[i]);
-	}
-	return (c);
+	if (d / 2)
+	cmp += tobinary(d / 2);
+	cmp += _putchar(d % 2 + '0');
+
+	return (cmp);
 }
