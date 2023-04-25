@@ -16,7 +16,7 @@ int _printpointer(va_list arm)
 
 	if (!ptr)
 	{
-		return (_putstr(NULL));
+		return (_putstr("(nil)"));
 	}
 
 	c += _putchar('0');
