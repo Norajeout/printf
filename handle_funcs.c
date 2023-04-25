@@ -14,10 +14,10 @@ int handle_nbr(int num, int flag)
 	{
 		count += _putchar('-');
 		num = -num;
-	} else if (flag && FLAG_PLUS)
+	} else if (flag & FLAG_PLUS)
 	{
 		count += _putchar('+');
-	} else if (flag && FLAG_SPACE)
+	} else if (flag & FLAG_SPACE)
 	{
 		count += _putchar(' ');
 	}
