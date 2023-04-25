@@ -24,19 +24,9 @@ int _printf(const char *format, ...)
 				c += _putchar('%');
 				break;
 			}
-			if (format[i] == '+')
-			{
-				flag = 1;
+			flag = check_flag(format[i]);
+			if (flag != 0)
 				i++;
-			} else if (format[i] == ' ')
-			{
-				flag = 2;
-				i++;
-			} else if (format[i] == '#')
-			{
-				flag = 4;
-				i++;
-			}
 			b = check_format(ap, format[i], flag);
 			if (b == -1)
 				return (-1);
@@ -47,4 +37,23 @@ int _printf(const char *format, ...)
 	}
 	va_end(ap);
 	return (c);
+}
+/**
+ * check_flag - checks the flag
+ * @s: parameter
+ * Return: the value of flag
+ */
+int check_flag(char s)
+{
+	if (s == '+')
+	{
+		return (1);
+	} else if (s == ' ')
+	{
+		return (2);
+	} else if (s == '#')
+	{
+		return (4);
+	}
+	return (0);
 }

@@ -10,7 +10,7 @@
 int check_format2(va_list list, char s, int flag)
 {
 	if (s == 'r' && !flag)
-		return(reverse(list));
+		return (reverse(list));
 	_putchar('%');
 	_putchar(s);
 	return (2);
