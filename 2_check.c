@@ -1,7 +1,7 @@
 #include"main.h"
 /*BY CHARIFA MASBAHI & NORA JEOUT*/
 /**
- * check_format - check the format specifier
+ * check_format2 - check the format specifier
  * @list: parameters
  * @s: char
  * @flag: flag
