@@ -6,7 +6,7 @@
 #define INT_MAX 2147483647
 #undef INT_MIN
 #define INT_MIN (-INT_MAX - 1)
-
+#undef BUFFER_SIZE
 #define BUFFER_SIZE 1024
 
 #include <limits.h>
@@ -17,6 +17,8 @@
 #include <string.h>
 #include <math.h>
 #include <stddef.h>
+#include <stdint.h>
+
 int _printf(const char *format, ...);
 int _putchar(char c);
 int _putstr(char *s);
@@ -31,5 +33,4 @@ int _putS(char *s);
 int tobinary(unsigned int d);
 int _printpointer(va_list arm);
 int printf_hex_aux(long int num);
-int printf_HEX_aux(unsigned int num);
 #endif
