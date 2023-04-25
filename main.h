@@ -6,6 +6,7 @@
 #define INT_MAX 2147483647
 #undef INT_MIN
 #define INT_MIN (-INT_MAX - 1)
+#undef BUFFER_SIZE
 #define BUFFER_SIZE 1024
 
 #include <limits.h>
@@ -14,7 +15,10 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include <string.h>
+#include <math.h>
+#include <stddef.h>
 #include <stdint.h>
+
 int _printf(const char *format, ...);
 int _putchar(char c);
 int _putstr(char *s);

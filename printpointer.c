@@ -13,16 +13,10 @@ int _printpointer(va_list arm)
 	char hex_buffer[16];
 	int x = 0;
 	int i;
-	char *s;
 
 	if (!ptr)
 	{
-		s = "(nil)";
-		for (i = 0; s[i] != '\0'; i++)
-		{
-			c += _putchar(s[i]);
-		}
-		return (c);
+		return (_putstr("(nil)"));
 	}
 
 	c += _putchar('0');
