@@ -1,21 +1,18 @@
 #include "main.h"
-
-/* BY CHARIFA MASBAHI & NORA JEOUT*/
 /**
  * _printf - function that produces output according to a format
- * @format: format
- * @... : parameters
+ * @format: format BY CHARIFA MASBAHI & NORA JEOUT
  * Return: the number of characters printed
  */
 int _printf(const char *format, ...)
 {
 	va_list ap;
-	int i = 0, c = 0;
+	int i = 0, c = 0, b = 0, flag = 0;
 
 	if (!format || (format[0] == '%' && format[1] == '\0'))
-	{
 		return (-1);
-	}
+	if (format[0] == '%' && format[1] == ' ' && !format[2])
+		return (-1);
 	va_start(ap, format);
 	while (format[i])
 	{
@@ -23,17 +20,40 @@ int _printf(const char *format, ...)
 		{
 			i++;
 			if (format[i] == '\0')
-				return (-1);
-			else if (format[i] == ' ')
 			{
-				return (-1);
+				c += _putchar('%');
+				break;
 			}
-			c += check_format(ap, format[i]);
-
+			flag = check_flag(format[i]);
+			if (flag != 0)
+				i++;
+			b = check_format(ap, format[i], flag);
+			if (b == -1)
+				return (-1);
+			c += b;
 		} else
 			c += _putchar(format[i]);
 		i++;
 	}
 	va_end(ap);
 	return (c);
+}
+/**
+ * check_flag - checks the flag
+ * @s: parameter
+ * Return: the value of flag
+ */
+int check_flag(char s)
+{
+	if (s == '+')
+	{
+		return (1);
+	} else if (s == ' ')
+	{
+		return (2);
+	} else if (s == '#')
+	{
+		return (4);
+	}
+	return (0);
 }
