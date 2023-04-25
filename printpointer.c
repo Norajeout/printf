@@ -1,7 +1,7 @@
 #include "main.h"
 /* by NORA JEOUT AND CHARIFA MASBA7I */
 /**
- * print_pointer - prints an hexgecimal number.
+ * _printpointer - prints an hexgecimal number.
  * @arm: arguments.
  * Return: counter.
  */
