@@ -10,7 +10,7 @@
 int _printf(const char *format, ...)
 {
 	va_list ap;
-	int i = 0, c = 0;
+	int i = 0, c = 0, b = 0;
 
 	if (!format || (format[0] == '%' && format[1] == '\0'))
 	{
@@ -24,7 +24,11 @@ int _printf(const char *format, ...)
 			i++;
 			if (format[i] == '\0' || format[i] == ' ')
 				return (-1);
-			c += check_format(ap, format[i]);
+			b = check_format(ap, format[i]);
+			if (b == -1)
+				return (-1);
+			else 
+				c += b;
 
 		} else
 			c += _putchar(format[i]);
