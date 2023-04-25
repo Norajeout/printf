@@ -8,7 +8,9 @@
 int printrot13(va_list list)
 {
 	int i = 0;
-	char *s = va_arg(list, char *);
+	char *s;
+       
+	s = va_arg(list, char *);
 
 	if (!s)
 	{
