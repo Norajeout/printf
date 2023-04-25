@@ -26,4 +26,5 @@ int _octal(unsigned int n);
 int _putS(char *s);
 int tobinary(unsigned int d);
 int _printpointer(va_list arm);
+int printf_hex_aux(long int num);
 #endif
