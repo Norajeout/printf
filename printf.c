@@ -23,18 +23,18 @@ int _printf(const char *format, ...)
 		{
 			i++;
 			if (format[i] == '\0')
-				return (-1);
-			else if (format[i] == '+')
+			{
+				c += _putchar('%');
+				break;
+			} if (format[i] == '+')
 			{
 				flag = 1;
 				i++;
-			}
-			else if (format[i] == ' ')
+			} else if (format[i] == ' ')
 			{
 				flag = 2;
 				i++;
-			}
-			else if (format[i] == '#')
+			} else if (format[i] == '#')
 			{
 				flag = 4;
 				i++;

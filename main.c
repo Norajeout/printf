@@ -40,9 +40,9 @@ int main(void)
 	printf("Len:[%d]\n", len2);
 	_printf("Unknown:[%r]\n");
 	_printf("Unknown%");
-	_printf("%S\n", "Best\nSchool");
+	_printf("\n%S\n", "Best\nSchool");
 	_printf("Binary:[%b]\n", 98);
 	_printf("HAHAHAHAHAHA%c\n");
-	_printf("%a");
+	_printf("%a\n");
 	return (0);
 }
