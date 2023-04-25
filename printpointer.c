@@ -1,5 +1,5 @@
 #include "main.h"
-/* by NORA JEOUT AND CHARIFA MASBA7I */
+/* by NORA JEOUT AND CHARIFA MASBAHI */
 /**
  * _printpointer - prints an hexgecimal number.
  * @arm: arguments.
