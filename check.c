@@ -29,7 +29,7 @@ int check_format(va_list list, char s)
 	else if (s == 'S')
 		return (_putS(va_arg(list, char *)));
 	else if (s == 'b')
-		return (tobinary(va_arg(list, unsigned int)));
+		return (tobinary(va_arg(list, unsigned int))); 
 	_putchar('%');
 	_putchar(s);
 	return (2);
