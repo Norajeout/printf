@@ -22,7 +22,6 @@ Printf is a group project assignment of two, this project is aimed towards cloni
 	> What is a "Type Descriptor"?
 5. What is va_end?
 	> performs cleanup for an ap object initialized by a call to va_start or va_copy
- ### To create our custom printf function, We need to plan out how it will work. We can create a flowchart to help us visualize the logic of the function. Here is an example of a simple flowchart for printf:
 ### Supported Format Specifiers
 The printf function supports a wide range of format specifiers that allow for the formatting of output in a variety of ways. Here are the format specifiers that are supported in this implementation of printf:
 
