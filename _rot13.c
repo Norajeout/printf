@@ -14,7 +14,7 @@ int printrot13(va_list list)
 
 	if (!s)
 	{
-		return (_putstr(NUL));
+		return (_putstr(NULL));
 	}
 	while (*s)
 	{
