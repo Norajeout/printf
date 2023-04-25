@@ -31,27 +31,3 @@ int printrot13(va_list list)
 	}
 	return (j);
 }
-/**
- * rot_13 - to crypt rot_13
- * @s: string
- * Return: string
- */
-int rot_13(char *s)
-{
-	int i = 0;
-	int c = 0;
-
-	if (!s)
-		return (_putstr(NULL));
-	while (s[i])
-	{
-		if (s[i] >= 'a' && s[i] <= 'z')
-			c += _putchar((((s[i] - 'a') + 13) % 26) + 'a');
-		if (s[i] >= 'A' && s[i] <= 'Z')
-			c += _putchar((((s[i] - 'A') + 13) % 26) + 'A');
-		else
-			c += _putchar(s[i]);
-		i++;
-	}
-	return (c);
-}
