@@ -38,8 +38,9 @@ int main(void)
 	len2 = printf("Percent:[%%]\n");
 	_printf("Len:[%d]\n", len);
 	printf("Len:[%d]\n", len2);
-	_printf("Unknown:[%r]\n");
-	_printf("Unknown%");
+	_printf("Unknown:[%r]\n", "hahahhaha");
+	_printf("Unknown%\n");
+	_printf("Unknown:[%R]", "hahahhaha");
 	_printf("\n%S\n", "Best\nSchool");
 	_printf("Binary:[%b]\n", 98);
 	_printf("HAHAHAHAHAHA%c\n");
