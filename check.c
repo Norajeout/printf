@@ -1,6 +1,5 @@
 #include "main.h"
 /* BY CHARIFA MASBAHI & NORA JEOUT*/
-
 /**
  * check_format - check the format specifier
  * @list: parameters
@@ -8,7 +7,6 @@
  * @flag: flag
  * Return: the number of charavters printed
  */
-
 int check_format(va_list list, char s, int flag)
 {
 	if (s == 'c')
@@ -39,7 +37,7 @@ int check_format(va_list list, char s, int flag)
 		return (_hexa(va_arg(list, unsigned int), "0123456789ABCDEF"));
 	} else if (s == 'o')
 	{
-		if (flag)
+		if (flag != 0)
 			return (handle_octal(va_arg(list, unsigned int), flag));
 		return (_octal(va_arg(list, unsigned int)));
 	} else if (s == 'S')

@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 	va_list ap;
 	int i = 0, c = 0, b = 0, flag = 0;
 
-	if (!format)
+	if (!format || (format[0] == '%' && format[1] == '\0'))
 	{
 		return (-1);
 	}
@@ -22,19 +22,19 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			if (format[i] == '\0' || format[i] == ' ')
+			if (format[i] == '\0')
 				return (-1);
-			if (format[i] == '+')
+			else if (format[i] == '+')
 			{
 				flag = 1;
 				i++;
 			}
-			if (format[i] == ' ')
+			else if (format[i] == ' ')
 			{
 				flag = 2;
 				i++;
 			}
-			if (format[i] == '#')
+			else if (format[i] == '#')
 			{
 				flag = 4;
 				i++;
