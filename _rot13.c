@@ -18,7 +18,7 @@ int printrot13(va_list list)
 	}
 	while (*s)
 	{
-		if ((*s >= 65 && *s <= 90) || (*s >= 97 && *s <= 1223))
+		if ((*s >= 65 && *s <= 90) || (*s >= 97 && *s <= 122))
 		{
 			if (*s <= 77 || *s <= 109)
 				i += _putchar(*s + 13);
