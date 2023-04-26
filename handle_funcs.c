@@ -57,19 +57,16 @@ int handle_hexa(unsigned int num, int flag, char *hex_digits)
 {
 	int count = 0;
 
-	if (flag & FLAG_HASH)
+	if ((flag & FLAG_HASH) && hex_digits[10] == 'a')
 	{
 		count += _putchar('0');
 		count += _putchar('x');
 	}
-	if (flag & FLAG_SPACE)
-	{
-		count += _putchar(' ');
-	}
-	if (flag & FLAG_PLUS)
-	{
-		count += _putchar('+');
-	}
+	if ((flag & FLAG_HASH) && hex_digits[10] == 'A')
+        {
+                count += _putchar('0');
+                count += _putchar('X');
+        }
 
 	count += _hexa(num, hex_digits);
 	return (count);

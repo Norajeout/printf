@@ -27,12 +27,12 @@ int check_format(va_list list, char s, int flag)
 		return (_putunbr(va_arg(list, unsigned int)));
 	} else if (s == 'x')
 	{
-		if (flag != 0)
+		if (flag == 4)
 			return (handle_hexa(va_arg(list, unsigned int), flag, "0123456789abcdef"));
 		return (_hexa(va_arg(list, unsigned int), "0123456789abcdef"));
 	} else if (s == 'X')
 	{
-		if (flag != 0)
+		if (flag == 4)
 			return (handle_hexa(va_arg(list, unsigned int), flag, "0123456789ABCDEF"));
 		return (_hexa(va_arg(list, unsigned int), "0123456789ABCDEF"));
 	} else if (s == 'o')
