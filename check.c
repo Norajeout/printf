@@ -17,12 +17,12 @@ int check_format(va_list list, char s, int flag)
 		return (_putchar('%'));
 	else if (s == 'i' || s == 'd')
 	{
-		if (flag != 0 && (flag == 1 || flag == 2))
+		if (flag == 1 || flag == 2)
 			return (handle_nbr(va_arg(list, int), flag));
 		return (_putint(va_arg(list, int)));
 	} else if (s == 'u')
 	{
-		if (flag != 0 && (flag == 1 || flag == 2))
+		if (flag == 1 || flag == 2)
 			return (handle_unbr(va_arg(list, unsigned int), flag));
 		return (_putunbr(va_arg(list, unsigned int)));
 	} else if (s == 'x')
