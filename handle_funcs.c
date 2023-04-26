@@ -76,7 +76,7 @@ int handle_octal(unsigned int num, int flag)
 {
 	int count = 0;
 
-	if (flag & FLAG_HASH)
+	if ((flag & FLAG_HASH) && num > 0)
 	{
 		count += _putchar('0');
 	}
