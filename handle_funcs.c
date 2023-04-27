@@ -12,8 +12,7 @@ int handle_nbr(int num, int flag)
 
 	if (num < 0)
 	{
-		count += _putchar('-');
-		num = -num;
+		count += _putint(num);
 	} else if (flag & FLAG_PLUS)
 	{
 		count += _putchar('+');
