@@ -1,8 +1,7 @@
 <h1 align="center">
 
 What did I make Original
-![]( https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgy7yg3JxvSeqxA3LFLZIL60ci84jPsjbCdw&usqp=CAU)
-# Write your own printf function.
+![]( https://www.meme-arsenal.com/memes/06d855dcb15b089e23c1bd7e18c6b7b6.jpg)
 # Printf()
 ## printf()
 The printf project is a collaboration between nora jeout and charifa masbahi, actual students of Software Engineering at alx africa, were a function named "_printf" imitates the actual "printf" command located in the stdio.h library. It contains some of the basic features and functions found in the manual 3 of "printf".
@@ -78,7 +77,7 @@ If the program runs successfully, the **return value** is the amount of chars pr
 - if specifier is unknown -> output error
 - end loop -> output remaining text -> end
 <p align="center">  
-<img src ="https://miro.medium.com/v2/resize:fit:720/format:webp/1*lX5wiJfKf1_1l8QqyGuaPQ.png">
+<img src ="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.alxafrica.com%2Fsoftware-engineering%2F&psig=AOvVaw2zhHZyGrO2m5UK8UHyNdwG&ust=1682804180405000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCPC1753Ezf4CFQAAAAAdAAAAABAH">
 </p>
 AUTHORS
 
