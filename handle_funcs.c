@@ -9,7 +9,17 @@
 int handle_nbr(int num, int flag) {
 	int count = 0;
 
-	if ((flag & FLAG_PLUS) && num >= 0)
+	if (flag == 5)
+	{
+		count += _putchar(' ');
+		count += _putchar('+');
+	}
+	else if (flag == 6)
+	{
+		count += _putchar('+');
+		count += _putchar(' ');
+	}
+	else if ((flag & FLAG_PLUS) && num >= 0)
 	{
 		count += _putchar('+');
 	} else if (flag & FLAG_SPACE)
@@ -77,7 +87,12 @@ int handle_octal(unsigned int num, int flag)
 {
 	int count = 0;
 
-	if ((flag & FLAG_HASH) && num > 0)
+	if (num == 0)
+	{
+		count += _putchar('0');
+		count += _putchar('0');
+	}
+	else if (flag & FLAG_HASH)
 	{
 		count += _putchar('0');
 	}
