@@ -43,7 +43,7 @@ int handle_hexa(unsigned int num, int flag, char *hex_digits);
 int handle_octal(unsigned int num, int flag);
 int check_format2(va_list list, char s, int flag);
 int reverse(va_list list);
-int check_flag(char s);
+int check_flag(char s, char c);
 int printrot13(va_list list);
 int rot_13(char *s);
 #endif

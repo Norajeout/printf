@@ -36,14 +36,14 @@ int main(void)
 	printf("Address:[%p]\n", addr);
 	len = _printf("Percent:[%%]\n");
 	len2 = printf("Percent:[%%]\n");
-	_printf("Len:[% d]\n", len);
+	_printf("Len:[%d]\n", len);
 	printf("Len:[%d]\n", len2);
 	_printf("Unknown:[%r]\n", "hahahhaha");
 	_printf("Unknown%\n");
 	_printf("Unknown:[%R]", "hahahhaha");
 	_printf("\n%S\n", "Best\nSchool");
 	_printf("Binary:[%b]\n", 98);
-	_printf("HAHAHAHAHAHA%c\n");
-	_printf("%a\n");
+	_printf("%#X\n", UINT_MAX);
+	printf("%#X\n", UINT_MAX);
 	return (0);
 }
