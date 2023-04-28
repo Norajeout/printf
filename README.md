@@ -77,7 +77,7 @@ If the program runs successfully, the **return value** is the amount of chars pr
 - if specifier is unknown -> output error
 - end loop -> output remaining text -> end
 <p align="center">  
-<img src ="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.alxafrica.com%2Fsoftware-engineering%2F&psig=AOvVaw2zhHZyGrO2m5UK8UHyNdwG&ust=1682804180405000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCPC1753Ezf4CFQAAAAAdAAAAABAH">
+<img src ="https://www.alxafrica.com/wp-content/uploads/2023/01/path-1.svg">
 </p>
 AUTHORS
 
