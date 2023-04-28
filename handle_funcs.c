@@ -22,7 +22,7 @@ int handle_nbr(int num, int flag)
 	else if ((flag & FLAG_PLUS) && num >= 0)
 	{
 		count += _putchar('+');
-	} else if (flag & FLAG_SPACE)
+	} else if ((flag & FLAG_SPACE) && num >= 0)
 	{
 		count += _putchar(' ');
 	}
@@ -71,14 +71,17 @@ int handle_hexa(unsigned int num, int flag, char *hex_digits)
 	{
 		count += _putchar('0');
 		count += _putchar('x');
+		count += _hexa(num, hex_digits);
 	}
 	else if ((flag & FLAG_HASH) && hex_digits[10] == 'A')
 	{
 		count += _putchar('0');
 		count += _putchar('X');
+		count += _hexa(num, hex_digits);
 	}
+	else
+		count += _hexa(num, hex_digits);
 
-	count += _hexa(num, hex_digits);
 	return (count);
 }
 /**
@@ -98,8 +101,9 @@ int handle_octal(unsigned int num, int flag)
 	else if (flag & FLAG_HASH)
 	{
 		count += _putchar('0');
+		count += _octal(num);
 	}
-
-	count += _octal(num);
+	else
+		count += _octal(num);
 	return (count);
 }
