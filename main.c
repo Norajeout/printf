@@ -46,5 +46,20 @@ int main(void)
 	_printf("HAHAHAHAHAHA%c\n");
 	_printf("Negative:[%d]\n", -762534);
 	_printf("%a\n");
+	_printf("%+d\n", INT_MIN);
+	_printf("%+d + %+d = %+d\n", INT_MIN, INT_MAX, (INT_MIN + INT_MAX));
+	_printf("%+i", INT_MIN);
+	_printf("%+i + %+i = %+i\n", INT_MIN, INT_MAX, (INT_MIN + INT_MAX));
+	_printf("% d", INT_MIN);
+	_printf("% d + % d = % d\n", INT_MIN, INT_MAX, (INT_MIN + INT_MAX));
+	_printf("% i", INT_MIN);
+	_printf("% i + % i = % i\n", INT_MIN, INT_MAX, (INT_MIN + INT_MAX));
+	_printf("% +i + %+ i = % +d\n", INT_MIN, INT_MAX, (INT_MIN + INT_MAX));
+	_printf("% +d + %+ d = % +i\n", INT_MIN, INT_MAX, (INT_MIN + INT_MAX));
+	_printf("%#o", 0);
+	_printf("%#x", 0);
+	_printf("%#X", 1024);
+	_printf("%#X", 0);
+	_printf("%#X", UINT_MAX);
 	return (0);
 }

@@ -6,14 +6,10 @@
  * @flag: flag
  * Return: count of chars printed
  */
-int handle_nbr(int num, int flag)
-{
+int handle_nbr(int num, int flag) {
 	int count = 0;
 
-	if (num < 0)
-	{
-		count += _putint(num);
-	} else if (flag & FLAG_PLUS)
+	if ((flag & FLAG_PLUS) && num >= 0)
 	{
 		count += _putchar('+');
 	} else if (flag & FLAG_SPACE)
@@ -24,6 +20,7 @@ int handle_nbr(int num, int flag)
 	count += _putint(num);
 	return (count);
 }
+
 /**
  * handle_unbr - prints unsigned integer with flag
  * @num: parameter
@@ -62,10 +59,10 @@ int handle_hexa(unsigned int num, int flag, char *hex_digits)
 		count += _putchar('x');
 	}
 	if ((flag & FLAG_HASH) && hex_digits[10] == 'A')
-        {
-                count += _putchar('0');
-                count += _putchar('X');
-        }
+	{
+		count += _putchar('0');
+		count += _putchar('X');
+	}
 
 	count += _hexa(num, hex_digits);
 	return (count);
