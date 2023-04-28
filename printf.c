@@ -25,7 +25,7 @@ int _printf(const char *format, ...)
 				break;
 			}
 			flag = check_flag(format[i], format[i + 1]);
-			if (flag != 0 && flag < 4)
+			if (flag != 0 && flag < 5)
 				i++;
 			else if (flag == 5 || flag == 6)
 				i += 2;
