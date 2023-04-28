@@ -41,6 +41,7 @@ int _printf(const char *format, ...)
 /**
  * check_flag - checks the flag
  * @s: parameter
+ * @c: parameter
  * Return: the value of flag
  */
 int check_flag(char s, char c)

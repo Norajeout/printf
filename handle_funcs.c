@@ -6,7 +6,8 @@
  * @flag: flag
  * Return: count of chars printed
  */
-int handle_nbr(int num, int flag) {
+int handle_nbr(int num, int flag)
+{
 	int count = 0;
 
 	if (flag == 5)
@@ -63,9 +64,9 @@ int handle_hexa(unsigned int num, int flag, char *hex_digits)
 	int count = 0;
 
 	if (num == 0)
-        {
-                count += _putchar('0');
-        }
+	{
+		count += _putchar('0');
+	}
 	else if ((flag & FLAG_HASH) && hex_digits[10] == 'a')
 	{
 		count += _putchar('0');
