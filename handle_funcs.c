@@ -11,7 +11,6 @@ int handle_nbr(int num, int flag) {
 
 	if (flag == 5)
 	{
-		count += _putchar(' ');
 		count += _putchar('+');
 	}
 	else if (flag == 6)
@@ -63,12 +62,16 @@ int handle_hexa(unsigned int num, int flag, char *hex_digits)
 {
 	int count = 0;
 
-	if ((flag & FLAG_HASH) && hex_digits[10] == 'a')
+	if (num == 0)
+        {
+                count += _putchar('0');
+        }
+	else if ((flag & FLAG_HASH) && hex_digits[10] == 'a')
 	{
 		count += _putchar('0');
 		count += _putchar('x');
 	}
-	if ((flag & FLAG_HASH) && hex_digits[10] == 'A')
+	else if ((flag & FLAG_HASH) && hex_digits[10] == 'A')
 	{
 		count += _putchar('0');
 		count += _putchar('X');
@@ -89,7 +92,6 @@ int handle_octal(unsigned int num, int flag)
 
 	if (num == 0)
 	{
-		count += _putchar('0');
 		count += _putchar('0');
 	}
 	else if (flag & FLAG_HASH)
