@@ -10,24 +10,28 @@ int handle_nbr(int num, int flag)
 {
 	int count = 0;
 
-	if (flag == 5)
+	if (flag == 5 && num >= 0)
 	{
 		count += _putchar('+');
+		count += _putint(num);
 	}
-	else if (flag == 6)
+	else if (flag == 6 && num >= 0)
 	{
 		count += _putchar('+');
-		count += _putchar(' ');
+		count += _putint(num);
 	}
 	else if ((flag & FLAG_PLUS) && num >= 0)
 	{
 		count += _putchar('+');
+		count += _putint(num);
 	} else if ((flag & FLAG_SPACE) && num >= 0)
 	{
 		count += _putchar(' ');
+		count += _putint(num);
 	}
+	else
+		count += _putint(num);
 
-	count += _putint(num);
 	return (count);
 }
 

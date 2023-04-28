@@ -43,7 +43,6 @@ int main(void)
 	_printf("Unknown:[%R]", "hahahhaha");
 	_printf("\n%S\n", "Best\nSchool");
 	_printf("Binary:[%b]\n", 98);
-	_printf("%#X\n", UINT_MAX);
-	printf("%#X\n", UINT_MAX);
+	_printf("% +d + %+ d = % +i \n", INT_MIN, INT_MAX, (INT_MIN + INT_MAX));;
 	return (0);
 }

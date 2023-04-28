@@ -17,7 +17,7 @@ int check_format(va_list list, char s, int flag)
 		return (_putchar('%'));
 	else if (s == 'i' || s == 'd')
 	{
-		if (flag == 1 || flag == 2)
+		if (flag == 1 || flag == 2 || flag == 5 || flag == 6)
 			return (handle_nbr(va_arg(list, int), flag));
 		return (_putint(va_arg(list, int)));
 	} else if (s == 'u')
