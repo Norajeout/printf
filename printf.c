@@ -25,9 +25,11 @@ int _printf(const char *format, ...)
 				break;
 			}
 			flag = check_flag(format[i], format[i + 1]);
-			if (flag != 0)
+			if (flag != 0 && flag < 4)
 				i++;
-			b = check_format(ap, (flag > 4) ? format[i + 1] : format[i], flag);
+			else if (flag == 5 || flag == 6)
+				i += 2;
+			b = check_format(ap, format[i], flag);
 			if (b == -1)
 				return (-1);
 			c += b;
